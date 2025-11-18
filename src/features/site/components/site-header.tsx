@@ -38,6 +38,7 @@ export function SiteHeader() {
               component={Link}
               href={item.href}
               fw={600}
+              c="#0f172a"
               onClick={() => setOpened(false)}
             >
               {item.label}
@@ -60,14 +61,14 @@ type BoxedHeaderProps = {
 
 function BoxedHeader({ navItems, opened, onToggle }: BoxedHeaderProps) {
   return (
-    <div style={{ background: 'linear-gradient(120deg, #0f63e6, #00459a)' }}>
+    <div style={{ background: 'linear-gradient(120deg, #fef7ec, #dbeafe)' }}>
       <Container size="lg" py="sm">
         <Group justify="space-between" align="center">
           <div>
-            <Text c="white" fw={700} size="lg">
+            <Text c="#0f172a" fw={700} size="lg">
               YFIN NEPAL
             </Text>
-            <Text c="white" size="xs">
+            <Text c="#334155" size="xs">
               Youth Federation of Indigenous Nationalities
             </Text>
           </div>
@@ -77,17 +78,17 @@ function BoxedHeader({ navItems, opened, onToggle }: BoxedHeaderProps) {
                 key={item.href}
                 component={Link}
                 href={item.href}
-                c="white"
+                c="#0f172a"
                 fw={500}
               >
                 {item.label}
               </Anchor>
             ))}
-            <Button component={Link} href="/contact" variant="white" color="dark">
+            <Button component={Link} href="/contact" variant="light" color="brand">
               Get in touch
             </Button>
           </Group>
-          <Burger opened={opened} onClick={onToggle} hiddenFrom="md" color="white" />
+          <Burger opened={opened} onClick={onToggle} hiddenFrom="md" color="#0f172a" />
         </Group>
       </Container>
     </div>

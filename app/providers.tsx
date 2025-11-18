@@ -15,7 +15,7 @@ export function AppProviders({ children }: AppProvidersProps) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
-    <MantineProvider defaultColorScheme="auto" theme={theme}>
+    <MantineProvider defaultColorScheme="light" theme={theme}>
       <Notifications position="top-right" />
       <QueryClientProvider client={queryClient}>
         {children}

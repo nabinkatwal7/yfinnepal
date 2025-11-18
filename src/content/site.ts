@@ -100,20 +100,38 @@ export const galleryItems = [
 export const newsItems = [
   {
     title: '8th National Conference',
+    slug: '8th-national-conference',
     summary:
       'Delegates from across Nepal gathered in Sarlahi to set the 2025 youth agenda.',
     date: 'Jan 2025',
+    content: [
+      'Representatives from all 59 districts convened to define an ambitious youth roadmap for indigenous empowerment.',
+      'Sessions highlighted inclusive education, digital skills, and sustainable livelihoods tailored to each community.',
+      'The closing declaration reaffirmed YFIN Nepal’s commitment to policy advocacy and national-level partnerships.',
+    ],
   },
   {
     title: 'Youth for Identity Campaign',
+    slug: 'youth-for-identity-campaign',
     summary:
       'Mobilizing youth volunteers to document oral histories and preserve scripts.',
     date: 'Oct 2024',
+    content: [
+      'Grassroots teams recorded folk stories in 20+ languages to preserve cultural memory.',
+      'Workshops trained youth on archiving techniques, digital publishing, and community storytelling.',
+      'The campaign will culminate in a traveling exhibit celebrating Indigenous language diversity.',
+    ],
   },
   {
     title: 'Advocacy Week',
+    slug: 'advocacy-week',
     summary: 'Coordinated lobbying for inclusive education policies and language rights.',
     date: 'Jun 2024',
+    content: [
+      'Advocacy delegations met with policymakers to push for multilingual curricula and leadership quotas.',
+      'Young advocates facilitated town halls that surfaced local priorities on climate, health, and education.',
+      'A policy brief summarizing these demands has been submitted to the Ministry of Youth and Sports.',
+    ],
   },
 ];
 
@@ -123,3 +141,7 @@ export const contactContent = {
   address: 'Kathmandu, Nepal',
   hours: 'Sunday - Friday, 10AM - 5PM NST',
 };
+
+export function findNewsBySlug(slug: string) {
+  return newsItems.find(item => item.slug === slug);
+}

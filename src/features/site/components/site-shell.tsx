@@ -11,7 +11,7 @@ type SiteShellProps = {
 
 export function SiteShell({ children }: SiteShellProps) {
   return (
-    <Box component="div" minH="100vh" bg="var(--mantine-color-body)">
+    <Box component="div" minH="100vh" bg="#f6f8fb">
       <SiteHeader />
       <Box component="main">{children}</Box>
       <SiteFooter />

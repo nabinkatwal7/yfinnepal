@@ -27,7 +27,12 @@ const socialIcons = [
 
 export function SiteFooter() {
   return (
-    <div style={{ backgroundColor: '#021c3d', color: 'white' }}>
+    <div
+      style={{
+        background: 'linear-gradient(180deg, #fefefe, #eef4ff)',
+        color: '#0f172a',
+      }}
+    >
       <Container size="lg" py="xl">
         <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl">
           <Stack gap={4}>
@@ -38,13 +43,11 @@ export function SiteFooter() {
             <Text size="sm">{contactContent.address}</Text>
             <Text size="sm">
               Phone:{' '}
-              <Anchor href={`tel:${contactContent.phone}`} c="white">
-                {contactContent.phone}
-              </Anchor>
+              <Anchor href={`tel:${contactContent.phone}`}>{contactContent.phone}</Anchor>
             </Text>
             <Text size="sm">
               Email:{' '}
-              <Anchor href={`mailto:${contactContent.email}`} c="white">
+              <Anchor href={`mailto:${contactContent.email}`}>
                 {contactContent.email}
               </Anchor>
             </Text>
@@ -54,8 +57,7 @@ export function SiteFooter() {
                   key={item.label}
                   component="a"
                   href={item.href}
-                  variant="default"
-                  style={{ backgroundColor: 'white' }}
+                  variant="light"
                   target="_blank"
                   aria-label={item.label}
                 >
@@ -67,7 +69,7 @@ export function SiteFooter() {
           <Stack gap={8}>
             <Text fw={600}>Quick Links</Text>
             {siteNavigation.map(item => (
-              <Anchor key={item.href} component={Link} href={item.href} c="white">
+              <Anchor key={item.href} component={Link} href={item.href}>
                 {item.label}
               </Anchor>
             ))}

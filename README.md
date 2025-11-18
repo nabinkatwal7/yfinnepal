@@ -3,8 +3,9 @@
 Starter kit for the Nepal Youth Finance dashboard. The stack includes:
 
 - Next.js App Router with TypeScript, strict linting, and absolute imports.
-- Mantine UI with a theme override and foundational layout pieces.
+- Mantine UI with a light-first theme override and foundational layout pieces.
 - TanStack Query v5 with server-side hydration + devtools.
+- Framer Motion-powered section reveals for a more engaging landing experience.
 - Vitest + Testing Library for fast unit tests.
 - Husky + lint-staged + Prettier to enforce formatting and lint cleanliness before every commit.
 
@@ -71,6 +72,8 @@ test/                 # Vitest setup + custom render utilities
 - **Design system**: Mantine theme + Notifications globally wired via `app/providers`.
 - **Data**: TanStack Query 5 with React Server Component hydration and Suspense-based UI.
 - **Validation**: Runtime-safe environment parsing via `zod`.
+- **News**: Static news listing plus `/news/[slug]` detail pages powered by shared content data.
+- **Animations**: Framer Motion fades/slide-ins wired through reusable helpers.
 - **Tooling**: Prettier, EditorConfig, Husky, lint-staged, and strict ESLint/TypeScript configs.
 - **Testing**: Vitest + Testing Library with provider-aware helpers.
 
